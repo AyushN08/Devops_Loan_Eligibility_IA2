@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Loan Eligibility Predictor</title>
+  </head>
+  <body>
+    <h2>Loan Eligibility Form</h2>
+    <form action="/predict" method="post">
+      <label>Applicant Income:</label>
+      <input type="text" name="ApplicantIncome" required><br><br>
+      <label>Coapplicant Income:</label>
+      <input type="text" name="CoapplicantIncome" required><br><br>
+      <label>Loan Amount:</label>
+      <input type="text" name="LoanAmount" required><br><br>
+      <label>Credit History (1 or 0):</label>
+      <input type="text" name="Credit_History" required><br><br>
+      <button type="submit">Predict</button>
+    </form>
+    {% if prediction %}
+      <h3>Prediction: {{ prediction }}</h3>
+    {% endif %}
+  </body>
+</html>
