@@ -1,0 +1,62 @@
+.app-container {
+  max-width: 450px;
+  margin: 60px auto;
+  background: #f9fafb;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  font-family: "Segoe UI", sans-serif;
+}
+
+h1 {
+  text-align: center;
+  color: #333;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+label {
+  display: flex;
+  flex-direction: column;
+  font-weight: 500;
+  color: #444;
+}
+
+input {
+  padding: 8px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+button {
+  margin-top: 10px;
+  background-color: #2563eb;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #1d4ed8;
+}
+
+.result {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.success {
+  color: green;
+}
+
+.error {
+  color: red;
+}
