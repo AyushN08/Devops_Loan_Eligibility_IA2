@@ -34,79 +34,84 @@ function App() {
   };
 
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center bg-gray-100">
-      <div className="bg-white p-8 rounded-2xl shadow-md w-full max-w-md">
-        <h1 className="text-3xl font-bold mb-6 text-center text-gray-800">
-          Loan Eligibility Predictor
+    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-50 via-indigo-100 to-blue-200 p-6">
+      <div className="bg-white shadow-2xl rounded-3xl w-full max-w-lg px-10 py-8 border border-gray-100">
+        <h1 className="text-3xl font-extrabold text-center text-gray-800 mb-8 tracking-tight">
+          🏦 Loan Eligibility Predictor
         </h1>
-        <form onSubmit={handleSubmit} className="space-y-4">
+
+        <form onSubmit={handleSubmit} className="space-y-6">
           <div>
-            <label className="block text-gray-700 font-semibold mb-2">
+            <label className="block text-gray-700 font-semibold mb-1">
               Applicant Income
             </label>
             <input
               type="number"
               value={ApplicantIncome}
               onChange={(e) => setApplicantIncome(e.target.value)}
-              className="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="w-full border border-gray-300 rounded-lg px-4 py-2 text-gray-700 shadow-sm focus:ring-4 focus:ring-blue-200 focus:border-blue-500 outline-none transition"
               required
             />
           </div>
+
           <div>
-            <label className="block text-gray-700 font-semibold mb-2">
+            <label className="block text-gray-700 font-semibold mb-1">
               Coapplicant Income
             </label>
             <input
               type="number"
               value={CoapplicantIncome}
               onChange={(e) => setCoapplicantIncome(e.target.value)}
-              className="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="w-full border border-gray-300 rounded-lg px-4 py-2 text-gray-700 shadow-sm focus:ring-4 focus:ring-blue-200 focus:border-blue-500 outline-none transition"
               required
             />
           </div>
+
           <div>
-            <label className="block text-gray-700 font-semibold mb-2">
+            <label className="block text-gray-700 font-semibold mb-1">
               Loan Amount
             </label>
             <input
               type="number"
               value={LoanAmount}
               onChange={(e) => setLoanAmount(e.target.value)}
-              className="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="w-full border border-gray-300 rounded-lg px-4 py-2 text-gray-700 shadow-sm focus:ring-4 focus:ring-blue-200 focus:border-blue-500 outline-none transition"
               required
             />
           </div>
+
           <div>
-            <label className="block text-gray-700 font-semibold mb-2">
+            <label className="block text-gray-700 font-semibold mb-1">
               Credit History (1 for Yes, 0 for No)
             </label>
             <input
               type="number"
               value={Credit_History}
               onChange={(e) => setCreditHistory(e.target.value)}
-              className="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="w-full border border-gray-300 rounded-lg px-4 py-2 text-gray-700 shadow-sm focus:ring-4 focus:ring-blue-200 focus:border-blue-500 outline-none transition"
               min="0"
               max="1"
               required
             />
           </div>
+
           <button
             type="submit"
-            className="w-full bg-blue-600 text-white py-2 rounded-lg font-semibold hover:bg-blue-700 transition"
+            className="w-full bg-blue-600 text-white py-3 rounded-lg font-semibold hover:bg-blue-700 hover:shadow-lg hover:-translate-y-[1px] transition-all duration-200"
           >
             Predict
           </button>
         </form>
 
         {prediction && (
-          <div className="mt-6 text-center text-lg font-semibold text-green-600">
-            Result: {prediction}
+          <div className="mt-8 text-center text-lg font-semibold text-green-600 bg-green-50 border border-green-200 py-3 rounded-lg">
+            ✅ Result: {prediction}
           </div>
         )}
 
         {error && (
-          <div className="mt-6 text-center text-lg font-semibold text-red-600">
-            {error}
+          <div className="mt-8 text-center text-lg font-semibold text-red-600 bg-red-50 border border-red-200 py-3 rounded-lg">
+            ⚠️ {error}
           </div>
         )}
       </div>
