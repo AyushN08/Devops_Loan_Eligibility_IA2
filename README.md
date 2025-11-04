@@ -26,23 +26,9 @@ This project uses a **React (TypeScript)** frontend and a **Flask (Python)** bac
 
 
 ## 📁 Folder Structure
-loan-prediction-app/
-│
-├── backend/
-│   ├── app.py                # Flask backend
-│   ├── model.pkl             # Trained ML model (if applicable)
-│   ├── requirements.txt      # Python dependencies
-│
-├── frontend/
-│   ├── src/
-│   │   ├── App.tsx           # React component with form + logic
-│   │   ├── App.css           # Styling
-│   │   ├── index.tsx
-│   │   └── ...other files
-│   ├── package.json
-│
-├── README.md
-└── ...
+
+<img width="667" height="532" alt="image" src="https://github.com/user-attachments/assets/f3c65e71-f7c5-4cdf-8199-44f34f94c093" />
+
 
 
 
