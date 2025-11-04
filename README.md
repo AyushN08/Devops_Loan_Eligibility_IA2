@@ -13,6 +13,7 @@ This project uses a **React (TypeScript)** frontend and a **Flask (Python)** bac
 
 ---
 
+
 ## 🧩 Tech Stack
 | Layer | Technology |
 |--------|-------------|
@@ -23,24 +24,27 @@ This project uses a **React (TypeScript)** frontend and a **Flask (Python)** bac
 
 ---
 
+
 ## 📁 Folder Structure
 loan-prediction-app/
 │
 ├── backend/
-│ ├── app.py # Flask backend
-│ ├── model.pkl # Trained ML model (if applicable)
-│ ├── requirements.txt # Python dependencies
+│   ├── app.py                # Flask backend
+│   ├── model.pkl             # Trained ML model (if applicable)
+│   ├── requirements.txt      # Python dependencies
 │
 ├── frontend/
-│ ├── src/
-│ │ ├── App.tsx # React component with form + logic
-│ │ ├── App.css # Styling
-│ │ ├── index.tsx
-│ │ └── ...other files
-│ ├── package.json
+│   ├── src/
+│   │   ├── App.tsx           # React component with form + logic
+│   │   ├── App.css           # Styling
+│   │   ├── index.tsx
+│   │   └── ...other files
+│   ├── package.json
 │
 ├── README.md
 └── ...
+
+
 
 ## ⚙️ Backend Setup (Flask API)
 ### 1️⃣ Navigate to the backend folder:
@@ -57,7 +61,10 @@ pip install -r requirements.txt
 
 ### 4️⃣ Run the flask App:
 python app.py
+
 The backend will start on http://localhost:5000.
+
+
 
 
 ## 🧩 Frontend Setup (React + TypeScript)
@@ -69,6 +76,7 @@ npm install
 
 ### 3️⃣ Start the frontend:
 npm run dev
+
 Frontend will run on http://localhost:5173.
 
 
