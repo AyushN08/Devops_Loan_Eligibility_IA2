@@ -27,26 +27,24 @@ This project uses a **React (TypeScript)** frontend and a **Flask (Python)** bac
 
 ## 📁 Folder Structure
 
-<img width="667" height="532" alt="image" src="https://github.com/user-attachments/assets/f3c65e71-f7c5-4cdf-8199-44f34f94c093" />
+<img width="626" height="617" alt="image" src="https://github.com/user-attachments/assets/963767d0-4efd-46e0-a600-3e953699e0ef" />
 
 
 
 
 ## ⚙️ Backend Setup (Flask API)
-### 1️⃣ Navigate to the backend folder:
-cd backend
-
-### 2️⃣ Create and activate a virtual environment:
+### 1️⃣ Create and activate a virtual environment:
 python -m venv venv
 venv\Scripts\activate    # (Windows)
-# OR
+### OR
 source venv/bin/activate # (Mac/Linux)
 
-### 3️⃣ Install dependencies:
+### 2️⃣ Install dependencies:
 pip install -r requirements.txt
 
-### 4️⃣ Run the flask App:
+### 3️⃣ Run the flask App:
 python app.py
+
 
 The backend will start on http://localhost:5000.
 
