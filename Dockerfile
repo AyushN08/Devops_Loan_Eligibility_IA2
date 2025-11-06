@@ -1,28 +1,23 @@
-# Stage 1: Build frontend
-FROM node:22 AS frontend-builder
+# Step 1: Build React app
+FROM node:18 AS build-frontend
 WORKDIR /app/frontend
 COPY frontend/package*.json ./
 RUN npm install
-COPY frontend/ ./
+COPY frontend/ .
 RUN npm run build
 
-# Stage 2: Build backend
-FROM python:3.11-slim
+# Step 2: Setup Flask backend
+FROM python:3.10-slim
 WORKDIR /app
 
-# Copy backend
+# Copy backend files
 COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Copy Flask app
-COPY app.py .
-COPY model.pkl .
+COPY . .
 
-# Copy built frontend (from previous stage)
-COPY --from=frontend-builder /app/frontend/dist ./frontend/dist
+# Copy built React app into Flask static folder
+COPY --from=build-frontend /app/frontend/dist ./frontend/dist
 
-# Expose port
 EXPOSE 5000
-
-# Command to start Flask
 CMD ["python", "app.py"]
