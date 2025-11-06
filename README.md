@@ -1,4 +1,4 @@
-# 🏦 Devops-IA2 Loan Eligibility Prediction (Devops + AI)
+# 🏦 Devops_IA2 Loan Eligibility Prediction (Devops + AI)
 
 A full-stack web application that predicts loan approval eligibility based on user inputs such as income, loan amount, and credit history.  
 This project uses a **React (TypeScript)** frontend and a **Flask (Python)** backend API for prediction.
